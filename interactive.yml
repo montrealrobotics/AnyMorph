@@ -1,0 +1,51 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  generateName: brandont-amorpheus-baseline-interactive-
+  labels:
+    type: interactive
+spec:
+  template:
+    metadata:
+      labels:
+        type: interactive
+      name: pod
+    spec:
+      containers:
+      - command:
+        - sleep
+        - infinity
+        env:
+        - name: SHELL
+          value: /bin/bash
+        - name: HOME
+          value: /store
+        envFrom:
+        - configMapRef:
+            name: proxy-config
+        image: amr-registry.caas.intel.com/aipg/brandont-amorpheus-baseline:latest
+        imagePullPolicy: Always
+        name: container
+        resources:
+          limits:
+            cpu: '8'
+            memory: 32Gi
+            nvidia.com/gpu: 1
+          requests:
+            cpu: 100m
+            memory: 1Gi
+        stdin: true
+        tty: true
+        volumeMounts:
+        - mountPath: /store
+          name: workdisk
+        workingDir: /store
+      hostIPC: true
+      restartPolicy: OnFailure
+      securityContext:
+        fsGroup: 17685
+        runAsUser: 12021892
+      volumes:
+      - name: workdisk
+        persistentVolumeClaim:
+          claimName: workdisk
