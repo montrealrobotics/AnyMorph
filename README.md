@@ -1,26 +1,26 @@
-## My Body is a Cage: the Role of Morphology in Graph-Based Incompatible Control
-### ICLR 2021
-#### [OpenReview](https://openreview.net/forum?id=N3zUDGN5lO) | [Arxiv](https://arxiv.org/abs/2010.01856)
+## AnyMorph: Learning Transferable Polices By Inferring Agent Morphology
+### ICML 2022
+#### [OpenReview](https://proceedings.mlr.press/v162/trabucco22b/trabucco22b.pdf) | [Arxiv](https://arxiv.org/abs/2206.12279)
+#### [Blog post](https://www.linkedin.com/pulse/anymorph-learning-transferable-policies-inferring-agent-trabucco/) and [here as Mila](https://mila.quebec/en/article/anymorph-learning-transferable-policies-by-inferring-agent-morphology/)
 
-[Vitaly Kurin](https://twitter.com/y0b1byte), [Maximilian Igl](https://twitter.com/MaxiIgl), [Tim Rocktäschel](https://twitter.com/_rockt), [Wendelin Boehmer](https://twitter.com/WendelinBoehmer), [Shimon Whiteson](https://twitter.com/shimon8282)
+[Brandon Trabucco](https://twitter.com/brandontrabucco), [Mariano Phielipp](https://twitter.com/mphielipp), [Glen Berseth](https://twitter.com/GlenBerseth)
+
+
 
 ### TL;DR 
 
-Providing morphological structure as an input graph is not a useful inductive bias in Graph-Based Incompatible Control.
-If we let the structural information go, we can do better with transformers.
+Our paper, Learning Transferable Policies By Inferring Agent Morphology, delivers state-of-the-art generalization and robustness for controlling large collections of reinforcement learning agents with diverse morphologies and designs.
 
 ```
-@inproceedings{
-kurin2021my,
-title={My Body is a Cage: the Role of Morphology in Graph-Based Incompatible Control},
-author={Vitaly Kurin and Maximilian Igl and Tim Rockt{\"a}schel and Wendelin Boehmer and Shimon Whiteson},
-booktitle={International Conference on Learning Representations},
-year={2021},
-url={https://openreview.net/forum?id=N3zUDGN5lO}
+@inproceedings{Trabucco2022AnyMorph,
+title={AnyMorph: Learning Transferable Policies By Inferring Agent Morphology},
+author={Trabucco Brandon and Phielipp Mariano and Glen Berseth},
+journal={International Conference on Machine Learning},
+year={2022}
 }
 ```
 
-![](https://i.guim.co.uk/img/media/b251ae63d78acf9389a8fce146580483ecdd2253/57_6_1416_849/master/1416.jpg?width=645&quality=45&auto=format&fit=max&dpr=2&s=e2908d58f0687b4bded76519f006dbd1)
+![](https://mila.quebec/wp-content/uploads/2022/08/anymorph_prompt-1.gif)
 
 ## Setup
 
